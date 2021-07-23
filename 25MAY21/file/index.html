@@ -1,0 +1,23 @@
+<form id="frm">
+	<input type="text" name="name"/>
+	<input type="file" name="file" id="file"/>
+	<input type="submit" name="submit" id="submit"/>
+</form>
+
+<script src="jquery-3.6.0.min.js"></script>
+
+<script>
+jQuery('#frm').submit(function(e){
+	e.preventDefault();
+	jQuery.ajax({
+		url:'submit.php',
+		type:'post',
+		data:new FormData(this),
+		contentType:false,
+		processData:false,
+		success:function(result){
+			alert(result);
+		}
+	});
+});
+</script>

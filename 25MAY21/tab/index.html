@@ -1,0 +1,32 @@
+<table>
+	<tr>
+		<td><a href="javascript:void(0)" onclick="tabs('php')" class="tabs_link" id="php_link">PHP</a></td>
+		<td><a href="javascript:void(0)" onclick="tabs('css')" class="tabs_link deactive" id="css_link">CSS</a></td>
+		<td><a href="javascript:void(0)" onclick="tabs('html')" class="tabs_link deactive" id="html_link">HTML</a></td>
+	</tr>
+	<tr id="php_box" class="tabs">
+		<td colspan="3">PHP Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas enim vel imperdiet suscipit. Sed condimentum sodales lorem, sit amet eleifend neque egestas non. Proin vestibulum aliquet semper. Nunc eleifend est ante, sed posuere massa venenatis vitae. In nec dolor lorem. Suspendisse sollicitudin augue vel massa mattis vulputate. Aenean purus mauris, mattis dapibus tincidunt et, faucibus in dui. Integer id elit venenatis, scelerisque metus non, sollicitudin arcu. Aliquam non nunc at lorem auctor posuere et a ex. Pellentesque dictum libero id vehicula tempor. Pellentesque eget volutpat tellus, tristique ultricies elit. Quisque ornare lacus sit amet orci auctor, vel faucibus urna hendrerit.</td>
+	</tr>
+	<tr id="css_box" class="tabs" style="display:none;">
+		<td colspan="3">CSS Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas enim vel imperdiet suscipit. Sed condimentum sodales lorem, sit amet eleifend neque egestas non. Proin vestibulum aliquet semper. Nunc eleifend est ante, sed posuere massa venenatis vitae. In nec dolor lorem. Suspendisse sollicitudin augue vel massa mattis vulputate. Aenean purus mauris, mattis dapibus tincidunt et, faucibus in dui. Integer id elit venenatis, scelerisque metus non, sollicitudin arcu. Aliquam non nunc at lorem auctor posuere et a ex. Pellentesque dictum libero id vehicula tempor. Pellentesque eget volutpat tellus, tristique ultricies elit. Quisque ornare lacus sit amet orci auctor, vel faucibus urna hendrerit.</td>
+	</tr>
+	<tr id="html_box" class="tabs" style="display:none;">
+		<td colspan="3">HTML Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris egestas enim vel imperdiet suscipit. Sed condimentum sodales lorem, sit amet eleifend neque egestas non. Proin vestibulum aliquet semper. Nunc eleifend est ante, sed posuere massa venenatis vitae. In nec dolor lorem. Suspendisse sollicitudin augue vel massa mattis vulputate. Aenean purus mauris, mattis dapibus tincidunt et, faucibus in dui. Integer id elit venenatis, scelerisque metus non, sollicitudin arcu. Aliquam non nunc at lorem auctor posuere et a ex. Pellentesque dictum libero id vehicula tempor. Pellentesque eget volutpat tellus, tristique ultricies elit. Quisque ornare lacus sit amet orci auctor, vel faucibus urna hendrerit.</td>
+	</tr>
+
+</table>
+
+<script src="jquery-3.6.0.min.js"></script>
+
+<script>
+function tabs(id){
+	jQuery('.tabs').hide();
+	jQuery('#'+id+'_box').show();
+	
+	jQuery('.tabs_link').css('text-decoration','none');
+	jQuery('#'+id+'_link').css('text-decoration','underline');
+}
+</script>
+<style>
+.deactive{text-decoration:none;}
+</style>
