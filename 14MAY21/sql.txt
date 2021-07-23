@@ -1,0 +1,39 @@
+insert into student(name,city,marks) values('Vishal','Noida',60);
+
+insert into student(name,city) values('Amit','Delhi');
+
+insert into student(name,city,marks) values('Namit','Pune',70),('Jatin','Noida',85);
+
+
+update student set marks=75 WHERE id=2
+
+update student set city='Delhi',marks=65 WHERE id=4
+
+
+delete from student where id=4
+> < >= <= !
+
+
+select * from student
+select name from student
+select name,city from student
+select * from student where city='Delhi'
+select * from student where city='Delhi' and marks<80
+select * from student where city='Delhi' and marks>80
+select * from student order by marks desc
+select * from student order by marks asc
+select * from student order by marks desc limit 2
+select * from student order by marks desc limit 1,2
+select * from student order by marks desc limit 2,1
+
+SELECT count(*) from student
+SELECT sum(marks) from student
+SELECT min(marks) from student
+SELECT max(marks) from student
+SELECT avg(marks) from student
+
+select * from student WHERE name like 'Vishal%'
+select * from student WHERE name like '%Vishal'
+select * from student WHERE name like '%Vishal%'
+select * from student WHERE name like '%Vishal%' or city like '%Vishal%'
+select * from student WHERE name like '_a%'
