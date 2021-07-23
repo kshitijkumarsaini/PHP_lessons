@@ -1,0 +1,60 @@
+<div id="box" style="background-color:red;width:200px;height:200px;position:absolute;"></div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+<a href="javascript:void(0)" onclick="hide_me()">Hide Me</a>
+
+<a href="javascript:void(0)" onclick="show_me()">Show Me</a>
+
+<a href="javascript:void(0)" onclick="toggle_me()">Toggle Me</a>
+<br/><br/>
+<a href="javascript:void(0)" onclick="fadeIn_me()">fadeIn Me</a>
+<a href="javascript:void(0)" onclick="fadeOut_me()">fadeOut Me</a>
+<a href="javascript:void(0)" onclick="fadeTaoggle_me()">fadeTaoggle Me</a>
+
+<br/><br/>
+<a href="javascript:void(0)" onclick="slideUP_me()">slideUP Me</a>
+<a href="javascript:void(0)" onclick="slideDown_me()">slideDown Me</a>
+<a href="javascript:void(0)" onclick="slideToggle_me()">slideToggle Me</a>
+
+<a href="javascript:void(0)" onclick="animate_me()">animate Me</a>
+
+<script src="jquery-3.6.0.min.js"></script>
+
+<script>
+function hide_me(){
+	jQuery('#box').hide(5000);
+}
+function show_me(){
+	jQuery('#box').show(5000);
+}
+function toggle_me(){
+	jQuery('#box').toggle(5000);
+}
+
+function fadeIn_me(){
+	jQuery('#box').fadeIn(5000);
+}
+function fadeOut_me(){
+	jQuery('#box').fadeOut(5000);
+}
+function fadeTaoggle_me(){
+	jQuery('#box').fadeToggle(5000);
+}
+
+function slideUP_me(){
+	jQuery('#box').slideUp(5000);
+}
+function slideDown_me(){
+	jQuery('#box').slideDown(5000);
+}
+function slideToggle_me(){
+	jQuery('#box').slideToggle(5000);
+}
+
+function animate_me(){
+	jQuery('#box').animate({
+		left:'200px'
+	});
+}
+
+
+</script>
