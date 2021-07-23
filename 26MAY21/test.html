@@ -1,0 +1,12 @@
+<div id="pp1">
+	<div id="pp">
+		<a href="javascript:void(0)" class='clk' id="hello">Click</a>
+	</div>
+</div>
+<script src="jquery-3.6.0.min.js"></script>
+
+<script>
+jQuery('.clk').click(function(){
+	console.log(jQuery(this).parent().parent().attr('id'));
+});
+</script>

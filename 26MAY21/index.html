@@ -1,0 +1,57 @@
+<form id="frm">
+	<table>
+		<tr>
+			<td>Name</td>
+			<td><input type="text" name="name" /></td>
+		</tr>
+		<tr>
+			<td>Email</td>
+			<td><input type="text" name="email" />
+			<div id="email_msg"></div>
+			</td>
+		</tr>
+		<tr>
+			<td>Mobile</td>
+			<td><input type="text" name="mobile" />
+			<div id="mobile_msg"></div>
+			</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td><input type="submit" name="submit" /></td>
+		</tr>
+	</table>
+</form>
+<div id="msg"></div>
+<script src="jquery-3.6.0.min.js"></script>
+
+<script>
+jQuery('#frm').submit(function(e){
+	jQuery('#email_msg').html('');
+	jQuery('#mobile_msg').html('');
+	jQuery('#msg').html('');
+	e.preventDefault();
+	jQuery.ajax({
+		url:'submit.php',
+		type:'post',
+		data:jQuery('#frm').serialize(),
+		success:function(result){
+			result=jQuery.parseJSON(result);
+			if(typeof result.email_msg!='undefined'){
+				jQuery('#email_msg').html(result.email_msg);
+			}
+			
+			if(typeof result.mobile_msg!='undefined'){
+				jQuery('#mobile_msg').html(result.mobile_msg);
+			}
+			
+			if(typeof result.status!='undefined'){
+				jQuery('#frm')[0].reset();
+				jQuery('#msg').html(result.msg);
+			}
+		}
+	});
+
+});
+
+</script>
